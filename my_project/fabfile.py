@@ -3,5 +3,5 @@
 from fabric.api import local
 def prepare_deploy():
 	local("./manage.py test my_app")
-	local("git add ../myproject && git commit -am 'commit'")
+	local("git add -p && git commit -am 'commit'")
 	local("git push")
